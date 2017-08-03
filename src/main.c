@@ -17,6 +17,6 @@ int main() {
     scanf("%c", &c);
   }
 
-  printf("8\n");
+  printf("3\n");
   return 0;
 }
