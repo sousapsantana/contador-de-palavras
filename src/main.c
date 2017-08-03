@@ -10,13 +10,25 @@
 int main() {
 
   char c;
+  int plv=0;
+  int flag=0;
 
   c = 1;
-
-  while (c != '\n') {
+  while (c != '\n') {       
     scanf("%c", &c);
+    if(flag==0 && ((c >= 65 && c <=90) || (c >= 97 && c <=122) || (c >= 48 && c <=57))){
+	plv++;
+	flag=1;		
+    }
+    if(flag==1 && (c < 48 || (c > 57 && c < 65) || (c > 90 && c < 97) || c > 122)){
+	flag=0;		
+    }
   }
 
-  printf("3\n");
+
+
+  printf("%d\n", plv);
   return 0;
 }
+
+//quero fazer amor gostoso
